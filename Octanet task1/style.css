@@ -1,0 +1,412 @@
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+  }
+  html,
+  body {
+    height: 100vh;
+    max-width: 100vw;
+  }
+  
+  header {
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1542813813-1f873f401e9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+  }
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100px;
+  }
+  .header-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-nav-links a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 40px 0;
+  }
+  .header-nav-links a:hover {
+    animation-name: change-color-text;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
+  @keyframes change-color-text {
+    100% {
+      color: aquamarine;
+    }
+  }
+  .header-nav-name {
+    color: aquamarine;
+    text-transform: uppercase;
+    cursor: default;
+    user-select: none;
+  }
+  
+  #music {
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+  }
+  .music-info {
+    color: white;
+    text-align: center;
+  }
+  .album-name {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 50px;
+    color: aquamarine;
+  }
+  .listen-now,
+  .more-videos,
+  .shop-all,
+  .more-dates,
+  .submit {
+    padding: 20px 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: aquamarine;
+    border: none;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .listen-now:hover,
+  .more-videos:hover,
+  .shop-all:hover,
+  .more-dates:hover,
+  .submit:hover {
+    animation-name: change-color-background;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
+  @keyframes change-color-background {
+    100% {
+      background-color: rgb(44, 253, 183);
+    }
+  }
+  
+  #videos {
+    height: auto;
+    background-image: url(https://gzg.aec.myftpupload.com/wp-content/uploads/2020/05/stars.jpg?id=497);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .video-image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .play_icon {
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .video-image {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+  }
+  .main-video-image {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+  }
+  .main-video,
+  .other-videos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px;
+  }
+  .video-link:hover .video-image,
+  .video-link:hover .main-video-image,
+  .image-fig .merch-image:hover {
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+  }
+  .video-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  #videos h3,
+  #merch h3,
+  #tour h3,
+  #connect h3 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  #merch {
+    height: auto;
+    background-image: url(https://only1gunna.com/wp-content/uploads/2020/07/bg-sky-deluxe.jpg?id=599);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .merch-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .shop-container {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .shop-container {
+    margin: 30px;
+  }
+  .image-fig-link {
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  #tour {
+    height: auto;
+    background-image: url(https://gzg.aec.myftpupload.com/wp-content/uploads/2020/05/stars.jpg?id=497);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tour-list {
+    margin: 20px;
+  }
+  .tour-row {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.623);
+  }
+  .date-box-container,
+  .show-box-container,
+  .tickets-box-container {
+    display: block;
+  }
+  .date-box,
+  .tickets-box,
+  .ticket-link {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .date-month {
+    font-size: 30px;
+  }
+  .date-day {
+    font-size: 40px;
+  }
+  .show-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 100px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .show-venue {
+    font-size: 25px;
+    font-weight: bold;
+    color: aquamarine;
+  }
+  .show-location {
+    font-size: 20px;
+    font-style: italic;
+  }
+  .ticket-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  #connect {
+    height: auto;
+    background-image: url(https://only1gunna.com/wp-content/uploads/2020/07/bg-sky-deluxe.jpg?id=599);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #connect .connect-small {
+    font-size: 26px;
+    color: white;
+  }
+  .form {
+    width: 700px;
+    margin: 40px auto;
+  }
+  label {
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  input {
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    background-color: black;
+    border: none;
+    color: grey;
+  }
+  .submit {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+  }
+  
+  #footer {
+    height: auto;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-icons,
+  .footer-text {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-icons li,
+  .footer-text li {
+    list-style: none;
+  }
+  .footer-icons a {
+    color: aquamarine;
+    margin: 5px;
+    font-size: 20px;
+  }
+  .footer-icons a:hover {
+    color: white;
+    transition: 0.5s all ease-in-out;
+  }
+  .footer-text a {
+    color: white;
+    margin: 8px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .footer-text a:hover {
+    color: aquamarine;
+    transition: 0.5s all ease-in-out;
+  }
+  
+  @media (max-width: 800px) {
+    .header-nav {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .header-nav-links {
+      margin-top: 10px;
+    }
+    .video-image {
+      width: 100%;
+    }
+    .main-video,
+    .other-videos {
+      flex-direction: column;
+    }
+    .show-box {
+      width: 200px;
+      text-align: center;
+    }
+    .form {
+      max-width: 100%;
+    }
+    .footer-text {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-text a {
+      margin-bottom: 5px;
+      display: block;
+    }
+  }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    opacity: 0.5;
+    margin: 20px;
+    z-index: 1;
+  }
+  .back-to-top:hover {
+    opacity: 1;
+    transition: 0.5s all ease-in-out;
+  }
